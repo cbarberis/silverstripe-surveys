@@ -1,0 +1,17 @@
+{
+	"name": "cbarberis/silverstripe-surveys",
+	"description": "Creates forms/surveys that are rendered with AngularJS in the front-end",
+	"type": "silverstripe-module",
+	"keywords": ["surveys", "angular", "forms"],
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "Carlos Barberis",
+			"email": "carlos@silverstripe.com"
+		}
+	],
+	"require":
+	{
+		"silverstripe/framework": "*"
+	}
+}

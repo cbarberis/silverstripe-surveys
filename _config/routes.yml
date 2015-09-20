@@ -1,0 +1,7 @@
+---
+Name: surveyroutes
+After: '#adminroutes'
+---
+Director:
+  rules:
+    'generate-json-file': 'JsonFileGenerator'
