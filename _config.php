@@ -1,3 +1,3 @@
 <?php
 
-define('SURVEYS_DIR', 'surveys');
+define('SURVEYS_DIR', 'silverstripe-surveys');
