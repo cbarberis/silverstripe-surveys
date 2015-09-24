@@ -22,13 +22,13 @@ class JsonFileGenerator extends Controller {
 				foreach($SQ->Questions() as $Question) {
 					$jsonString .= $Question->renderJson();
 				}
-				$jsonString = substr($jsonString, 0, -1);
+				$jsonString = rtrim($jsonString, ",");
 				$jsonString .= ']},';
 			}
-			$jsonString = substr($jsonString, 0, -1);
+			$jsonString = rtrim($jsonString, ",");
 			$jsonString .= ']},';
 		}
-		$jsonString = substr($jsonString, 0, -1);
+		$jsonString = rtrim($jsonString, ",");
 		$jsonString .= ']}';
 
 		file_put_contents($fullFileName, $jsonString);
