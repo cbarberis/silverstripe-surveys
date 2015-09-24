@@ -27,6 +27,10 @@ class Survey extends DataObject {
 		'JsonFileName' => 'Json file name'
 	);
 
+	private static $singular_name = 'Form';
+	
+	private static $plural_name = 'Forms';
+
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->removeByName('LastJsonGenerated');

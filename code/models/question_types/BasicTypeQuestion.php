@@ -17,8 +17,8 @@ class BasicTypeQuestion extends Question {
 		\'type\': \'$this->ClassName\',
 		\'fieldType\': \'$this->ValidationType\',
 		\'pattern\': \'$this->Pattern\',
-		\'minlength\': $this->Minlength,
-		\'maxlength\': $this->Maxlength
+		\'minlength\': \'$this->Minlength\',
+		\'maxlength\': \'$this->Maxlength\'
 	}';
 
 }

@@ -11,7 +11,8 @@ class JsonFileGenerator extends Controller {
 			return false;
 		}
 
-		$fullFileName = Director::baseFolder() . '/surveys/jsonfiles/' . $filename . '.json';
+		$folder = Folder::find_or_make('jsonFormFiles');
+		$fullFileName = Director::baseFolder() . '/' . $folder->getRelativePath() . $filename . '.json';
 
 		$jsonString = '{"name":"'.$Survey->Name.'","startDate": "'.$Survey->StartDate.'", "endDate": "'.$Survey->EndDate.'","sections": [';
 		foreach($Survey->Sections() as $Section) {
