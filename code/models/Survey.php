@@ -48,4 +48,18 @@ class Survey extends DataObject {
 
 		return $fields;
 	}
+
+	protected function onbeforeWrite() {
+		parent::onBeforeWrite();
+
+		$filter = URLSegmentFilter::create();
+		$this->JsonFileName = $filter->filter($this->Name);
+	}
+
+
+	function getJsonFile() {
+		$folder = Folder::find_or_make('jsonFormFiles');
+		$filePath = Director::baseFolder() . '/' . $folder->getRelativePath() . $this->JsonFileName . '.json';
+		return file_get_contents($filePath);
+	}
 }
