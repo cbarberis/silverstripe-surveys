@@ -1,17 +1,18 @@
 <?php
 
-class BasicTypeQuestion extends Question {
+class BasicTypeQuestion extends Question
+{
 
-	private static $db = array(
-		"ValidationType" => "Enum('Text,Number,Email,Currency,TextArea','Text')",
-		"Pattern" => "Varchar",
-		"Minlength" => "Varchar",
-		"Maxlength" => "Varchar"
-	);
+    private static $db = array(
+        "ValidationType" => "Enum('Text,Number,Email,Currency,TextArea','Text')",
+        "Pattern" => "Varchar",
+        "Minlength" => "Varchar",
+        "Maxlength" => "Varchar"
+    );
 
-	private static $has_one = array();
+    private static $has_one = array();
 
-	public $jsonSchema = '{
+    public $jsonSchema = '{
 		\'label\': \'$this->Label\',
 		\'mandatory\': $this->Mandatory,
 		\'type\': \'$this->ClassName\',
@@ -20,5 +21,4 @@ class BasicTypeQuestion extends Question {
 		\'minlength\': \'$this->Minlength\',
 		\'maxlength\': \'$this->Maxlength\'
 	}';
-
 }
